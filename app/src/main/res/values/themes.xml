@@ -1,8 +1,19 @@
-<resources xmlns:tools="http://schemas.android.com/tools">
+<resources>
     <!-- Base application theme. -->
-    <style name="Base.Theme.SoundBox" parent="Theme.Material3.DayNight.NoActionBar">
+    <style name="Base.Theme.SoundBox" parent="Theme.MaterialComponents.NoActionBar">
         <!-- Customize your light theme here. -->
-        <!-- <item name="colorPrimary">@color/my_light_primary</item> -->
+        <!--  primary brand color      -->
+        <item name="colorPrimary">@color/purple_200</item>
+        <item name="colorPrimaryVariant">@color/purple_700</item>
+        <item name="colorOnPrimary">@color/black</item>
+
+        <!--  secondary brand color      -->
+
+        <item name="colorSecondary">@color/teal_200</item>
+        <item name="colorSecondaryVariant">@color/teal_200</item>
+        <item name="colorOnSecondary">@color/black</item>
+
+
     </style>
 
     <style name="Theme.SoundBox" parent="Base.Theme.SoundBox" />
