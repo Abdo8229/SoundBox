@@ -12,7 +12,7 @@ class RootNavigationBarPanel(context: Context, panelLayout: MultiSlidingUpPanelL
     private var binding: RootNavigationBarBinding
 
 
-    init {
+      init {
         getContext().setTheme(R.style.Base_Theme_SoundBox)
         binding = RootNavigationBarBinding .inflate(LayoutInflater.from(getContext()), this, true)
     }

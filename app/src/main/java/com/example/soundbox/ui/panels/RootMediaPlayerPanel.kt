@@ -61,6 +61,7 @@ class RootMediaPlayerPanel(context: Context, panelLayout: MultiSlidingUpPanelLay
                         multiSlidingUpPanel.isSlidingEnabled = false
                         return
                     }
+
                     else -> {
                         multiSlidingUpPanel.isSlidingEnabled = true
                     }
@@ -70,7 +71,8 @@ class RootMediaPlayerPanel(context: Context, panelLayout: MultiSlidingUpPanelLay
             }
 
             override fun onSlide(bottomSheet: View, slideOffset: Float) {
-                TODO("Not yet implemented")
+                // do nothing
+
             }
         })
 
