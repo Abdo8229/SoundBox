@@ -10,5 +10,7 @@
     <!-- secondary brand color -->
 
     <color name="teal_200">#05D6B9</color>
+    <color name="teal_700">#017B78</color>
+
 
 </resources>

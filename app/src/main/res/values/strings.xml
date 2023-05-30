@@ -3,4 +3,9 @@
     <string name="home">Home</string>
     <string name="library">Library</string>
     <string name="settings">Settings</string>
+    <string name="now_playing">Now Playing</string>
+    <string name="hope">Hope</string>
+    <string name="nf">NF</string>
+    <string name="track_time">0:24</string>
+    <string name="track_time_end">5:04</string>
 </resources>

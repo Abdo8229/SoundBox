@@ -3,8 +3,8 @@ package com.example.soundbox
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import com.example.soundbox.databinding.ActivityMainBinding
-import com.example.soundbox.ui.panels.RootMediaPlayerPanel
-import com.example.soundbox.ui.panels.RootNavigationBarPanel
+import com.example.soundbox.views.panels.RootMediaPlayerPanel
+import com.example.soundbox.views.panels.RootNavigationBarPanel
 import com.realgear.multislidinguppanel.Adapter
 import com.realgear.multislidinguppanel.PanelStateListener
 

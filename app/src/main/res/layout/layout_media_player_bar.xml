@@ -10,13 +10,11 @@
     <androidx.cardview.widget.CardView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        android:background="#00000000"
         android:elevation="0dp"
-        app:background="#000000"
         app:cardCornerRadius="6dp"
         app:cardElevation="0dp"
-
         >
-
         <FrameLayout
             android:id="@+id/media_player_bar_bg"
             android:layout_width="match_parent"
@@ -41,6 +39,7 @@
                 app:trackThickness="2dp" />
 
             <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/media_player_bar_controls_constraint"
                 android:layout_width="match_parent"
                 android:layout_height="0dp"
                 android:layout_weight="1"
@@ -70,16 +69,18 @@
                 <LinearLayout
                     android:id="@+id/text_view_container"
                     android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
+                    android:layout_height="50dp"
                     android:orientation="vertical"
                     android:padding="6dp"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintStart_toEndOf="@id/media_player_bar_album_art"
                     app:layout_constraintTop_toTopOf="parent">
+
                     <TextView
                         android:id="@+id/media_player_bar_song_name"
                         android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
+                        android:layout_height="0dp"
+                        android:layout_weight="1"
                         android:textColor="#FFF"
                         android:textSize="12sp"
                         android:textStyle="bold"
@@ -88,7 +89,8 @@
                     <TextView
                         android:id="@+id/media_player_bar_song_artist"
                         android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
+                        android:layout_height="0dp"
+                        android:layout_weight="1"
                         android:textColor="#989898"
                         android:textSize="12sp"
                         tools:text="Song" />
@@ -114,8 +116,22 @@
                     android:id="@+id/card_view_play_pause_container"
                     android:layout_width="0dp"
                     android:layout_height="0dp"
-                    app:cardBackgroundColor="@color/teal_200"
+                    app:cardBackgroundColor="@color/teal_700"
+                    app:cardCornerRadius="6dp"
+                    app:barrierMargin="4dp"
+                    app:layout_constraintDimensionRatio="H,1:1"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
                     >
+                        <ImageButton
+                            android:id="@+id/btn_play_pause_media_player_bar"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:src="@drawable/ic_play_arrow_24px"
+                            android:background="@null"
+                            android:scaleType="fitCenter"/>
+
 
 
                 </androidx.cardview.widget.CardView>
