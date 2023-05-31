@@ -27,7 +27,7 @@ import java.lang.annotation.Retention
 import java.lang.annotation.RetentionPolicy
 import java.lang.ref.WeakReference
 
-class CustomBottomSheetBehavior<V : View?> : CoordinatorLayout.Behavior<V> {
+class CustomBottomSheetBehavior<V : View> : CoordinatorLayout.Behavior<V> {
     // Important add your package here or don't delete package line from your created class.
     // Make sure the java file name & this class name, matches.
     val TAG = this.javaClass.simpleName
@@ -950,13 +950,13 @@ class CustomBottomSheetBehavior<V : View?> : CoordinatorLayout.Behavior<V> {
          * @param view The [View] with [CustomBottomSheetBehavior].
          * @return The [CustomBottomSheetBehavior] associated with the `view`.
          */
-        fun <V : View?> from(view: V): CustomBottomSheetBehavior<V> {
+        fun <V : View?> from(view: V): CustomBottomSheetBehavior<View> {
             val params = view!!.layoutParams
             require(params is CoordinatorLayout.LayoutParams) { "The view is not a child of CoordinatorLayout" }
             val behavior = params
                 .behavior
             require(behavior is CustomBottomSheetBehavior<*>) { "The view is not associated with AnchorBottomSheetBehavior" }
-            return behavior as CustomBottomSheetBehavior<V>
+            return behavior as CustomBottomSheetBehavior<View>
         }
     }
 }

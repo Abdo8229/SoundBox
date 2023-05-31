@@ -13,6 +13,7 @@ android {
         targetSdk 33
         versionCode 1
         versionName "1.0"
+        compileSdkPreview = "UpsideDownCake"
 
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
     }
@@ -44,12 +45,31 @@ dependencies {
     testImplementation 'junit:junit:4.13.2'
     androidTestImplementation 'androidx.test.ext:junit:1.1.5'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.5.1'
-
+//        load modules
     implementation project(path: ':lib:extensions')
     implementation project(path: ':lib:icons_pack')
+    implementation project(path: ':lib:mediaplayer')
 
     // real_gear_multi_sliding_up_panel https://github.com/realgearinc/multi-sliding-up-panel
     implementation 'com.github.realgearinc:multi-sliding-up-panel:1.2.9'
     //bottom bar
     implementation 'com.github.realgearinc:readable-bottom-bar:1.0.2'
+
+//        lifecycle_version
+    def lifecycle_version = "2.6.1"
+    //  1-ViewModel       2-LiveData
+    implementation("androidx.lifecycle:lifecycle-viewmodel-ktx:$lifecycle_version")
+    implementation("androidx.lifecycle:lifecycle-livedata-ktx:$lifecycle_version")
+    implementation("androidx.lifecycle:lifecycle-common-java8:$lifecycle_version")
+
+//        room_version
+    def room_version = "2.5.1"
+    implementation("androidx.room:room-runtime:$room_version")
+    annotationProcessor("androidx.room:room-compiler:$room_version")
+
+    //        glide_version
+    def glide_version = "4.15.1"
+    implementation ("com.github.bumptech.glide:glide:$glide_version")
+//    annotationProcessor("com.github.bumptech-glide:compiler:$glide_version")
+
 }
